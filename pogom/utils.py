@@ -15,10 +15,7 @@ import platform
 from . import config
 from exceptions import APIKeyException
 
-if platform.system() == "Windows":
-    DEFAULT_THREADS = 1
-else:
-    DEFAULT_THREADS = 5
+DEFAULT_THREADS = 1
 
 def parse_unicode(bytestring):
     decoded_string = bytestring.decode(sys.getfilesystemencoding())
